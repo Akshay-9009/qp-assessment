@@ -21,10 +21,6 @@ public class AdminController {
 	@Autowired
 	private GroceryService groceryService;
 
-	public AdminController(GroceryService groceryService) {
-		this.groceryService = groceryService;
-	}
-
 	@PostMapping("/add")
 	public GroceryItem addGroceryItem(@RequestBody GroceryItem item) {
 		return groceryService.addGroceryItem(item);
